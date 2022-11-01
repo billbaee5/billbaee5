@@ -24,7 +24,7 @@
                                     <th scope="row">{{ ++$i }}</th>
                                     <td>{{$item->nama}}</td>
                                     <td>
-                                        <a onclick="show{{ $item->id }}" class="btn btn-sm btn-info">
+                                        <a onclick="show({{ $item->id }})" class="btn btn-sm btn-info">
                                             <i class="fas fa-folder-open"></i>
                                         </a>
                                         <a href="{{ route('masterproject.create') }}?siswa={{ $item->id }}" class="btn btn-sm btn-success">

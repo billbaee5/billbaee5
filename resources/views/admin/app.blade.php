@@ -72,7 +72,7 @@
                     <form action="/logout" method="post">
                     @csrf
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" type="submit" value="Logout"</a>
+                    <input class="btn btn-primary" type="submit" value="Logout">
                     </form>
                 </div>
             </div>

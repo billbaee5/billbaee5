@@ -26,13 +26,13 @@ Route::middleware('auth')->group(function () {
     Route::resource('/mastersiswa', SiswaController::class);
     Route::resource('/masterproject', ProjectController::class);
     Route::resource('/masterkontak', KontakController::class);
+    Route::get('/dashboard', [DashboardController::class, 'index']);
 });
 
 //guest
 Route::middleware('guest')->group(function () {
     Route::get('/', [LoginController::class, 'index'])->name('login');
-    Route::post('/login', [LoginController::class, 'authenticate'])->name('login.auth');
-    Route::get('/dashboard', function () { return view('home'); });
+    Route::post('/', [LoginController::class, 'authenticate'])->name('login.auth');
     Route::get('/about', function () { return view('about'); });
     Route::get('/project', function () { return view('project'); });
     Route::get('/contact', function () { return view('contact'); });
