@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
 
 //guest
 Route::middleware('guest')->group(function () {
-    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::get('/', [LoginController::class, 'index'])->name('login');
     Route::post('/login', [LoginController::class, 'authenticate'])->name('login.auth');
     Route::get('/', function () { return view('home'); });
     Route::get('/about', function () { return view('about'); });
