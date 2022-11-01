@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware('guest')->group(function () {
     Route::get('/', [LoginController::class, 'index'])->name('login');
     Route::post('/login', [LoginController::class, 'authenticate'])->name('login.auth');
-    Route::get('/', function () { return view('home'); });
+    Route::get('/dashboard', function () { return view('home'); });
     Route::get('/about', function () { return view('about'); });
     Route::get('/project', function () { return view('project'); });
     Route::get('/contact', function () { return view('contact'); });
